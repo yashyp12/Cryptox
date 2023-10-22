@@ -1,6 +1,5 @@
 """
 URL configuration for Python_YP project.
-
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
 Examples:
@@ -25,12 +24,12 @@ admin.site.index_title = "Welcome to Techie Yp   "
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index',views.index,name='home'),
+    path('',views.index,name='home'),
     path('AboutUs',views.AboutUs,name='AboutUs'),
     path('TopCoins',views.TopCoins,name='TopCoins'),
     path('LoginUser',views.LoginUser,name='LoginUser'),
     path('LogOut',views.LogOut,name='LogOut'),
     path('btc_price', views.btc_price, name='btc_price'),
- 
- 
+
+
  ]
