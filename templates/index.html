@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <title>Techie Yp</title>
+    <meta name="" content="" />
+    <link rel="icon" type="image/png" sizes="27x16" href="/static/assets/img/favv.png" />
+    <link rel="icon" type="image/png" sizes="645x387" href="/static/assets/img/logo-removebg-preview.png" />
+    <link rel="icon" type="image/png" sizes="645x387" href="/static/assets/img/logo-removebg-preview.png" />
+    <link rel="icon" type="image/png" sizes="645x387" href="/static/assets/img/logo-removebg-preview.png" />
+    <link rel="icon" type="image/png" sizes="645x387" href="/static/assets/img/logo-removebg-preview.png" />
+    <link rel="stylesheet" href="/static/assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="manifest" href="/static/manifest.json" />
+    <link rel="stylesheet" href="/static/assets/fonts/font-awesome.min.css" />
+    <link rel="stylesheet" href="/static/assets/css/styles.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+</head>
+
+<body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="56">
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top" id="mainNav"
+        style="height: 73px; font-family: Abel, sans-serif">
+        <div class="container">
+            <a class="navbar-brand" href="#page-top"><strong>Techie Yp</strong></a><button data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive" class="navbar-toggler float-end" aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/btc_price">Top Coins</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/AboutUs">ABOUT US</a>
+                    </li>
+
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="/btc_price">Prices</a>
+                    </li>
+ -->
+
+                    {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="LogOut">Logout</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="/LoginUser">Login</a>
+                    </li>
+                    {% endif %}
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Login">signup</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="masthead" style="
+        background: url('/static/assets/img/btcc.jpg') center / cover repeat-y;
+        height: 700px;
+        text-align: center;
+      ">
+        <div class="container text-uppercase h-100">
+            <div class="row h-100" style="height: 837px; --bs-body-font-size: 3rem">
+                <div class="col-lg-7 my-auto">
+                    {% if messages %} {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }} alert-dismissible fade show my-8" role="alert"
+                        style="margin-top: -23px">
+                        <strong> {{ message }} </strong>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    {% endfor %} {% endif %}
+                    <div class="mx-auto header-content">
+                        <h1 data-aos="fade-right" data-aos-delay="100" class="mb-5">
+                            TECHIE YP&nbsp;
+                        </h1>
+                        <a class="btn btn-outline-success text-nowrap border-2 border-info shadow btn-xl" role="button"
+                            data-aos="zoom-in" data-aos-delay="350" href="#download" style="
+                  color: var(--bs-gray-100);
+                  font-size: 15px;
+                  font-weight: bold;
+                  text-align: justify;
+                  --bs-body-color: var(--bs-pink);
+                  background: rgba(0, 0, 0, 0.12);
+                  border-style: groove;
+                "><strong><span style="color: rgb(214, 216, 211)">LETS EXPLORE</span></strong></a>
+                    </div>
+                </div>
+                <div class="col-lg-5 my-auto">
+                    <div class="device-container"></div>
+                    <div class="iphone-mockup"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="bg-primary download" id="download" style="
+        height: 940px;
+        background: url('/static/assets/img/pexels-daniel-dan-7708806.jpg') top /
+          cover repeat;
+      ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 mx-auto">
+                    <h1 class="text-nowrap text-capitalize fw-normal shadow d-inline d-xxl-flex align-items-xxl-start section-heading"
+                        data-aos="fade-up" data-aos-delay="200" style="
+                border-color: var(--bs-red);
+                color: var(--bs-gray-100);
+                font-size: 50px;
+                font-family: Abel, sans-serif;
+                height: 86px;
+                width: 862px;
+                transform: translate(88px);
+                transform-style: preserve-3d;
+                filter: blur(0px) hue-rotate(0deg) invert(0%) sepia(0%);
+                --bs-body-font-size: -3rem;
+                --bs-body-font-weight: bold;
+              ">
+                        <strong>Let's Dive into the Crypto universe</strong>
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="features" class="features" style="
+        background: url('/static/assets/img/pexels-ds-stories-7267489.jpg')
+            center / cover no-repeat,
+          var(--bs-indigo);
+        color: var(--bs-blue);
+        height: 1014px;
+      ">
+        <div class="container">
+            <div class="text-center section-heading">
+                <h1 class="display-2 d-grid float-none" data-aos="zoom-in" style="
+              color: var(--bs-red);
+              font-family: Abel, sans-serif;
+              background: rgba(0, 0, 0, 0.12);
+              border-width: 2px;
+              text-shadow: 0px 0px 0px var(--bs-info);
+              height: 76.3906px;
+              width: 1321px;
+              font-size: 63px;
+              box-shadow: 0px 0px var(--bs-pink);
+            ">
+                    <strong><span style="color: rgb(166, 237, 215)">Discover Blockchain Technology&nbsp;</span></strong>
+                </h1>
+                <hr />
+            </div>
+            <div class="row">
+                <div class="col-lg-4 my-auto">
+                    <div class="device-container"></div>
+                </div>
+                <div class="w-100"></div>
+            </div>
+        </div>
+    </section>
+    <section class="cta" style="background-image: url('bg-cta.jpg')">
+        <div class="cta-content" style="border-style: none"></div>
+        <div class="overlay" style="
+          background: url('/static/assets/img/pexels-jonathan-borba-14891566.jpg')
+              center / cover no-repeat,
+            var(--bs-blue);
+          height: 721px;
+        ">
+            <h3 class="text-nowrap text-capitalize fw-normal shadow d-inline d-xxl-flex align-items-xxl-start section-heading"
+                data-aos="fade-up" data-aos-delay="200" style="
+            color: var(--bs-gray-100);
+            font-size: 50px;
+            font-family: Abel, sans-serif;
+            height: 82px;
+            width: 594px;
+            transform: translate(235px) scale(1.03);
+            filter: blur(0px) hue-rotate(0deg) invert(0%) sepia(0%);
+            --bs-body-font-size: -3rem;
+            --bs-body-font-weight: bold;
+            transform-style: preserve-3d;
+            margin: 430px;
+            padding: 17px;
+            border-style: initial;
+            border-color: var(--bs-red);
+          ">
+                <strong><span style="color: rgb(7, 7, 7)">Crypto for Everyone&nbsp;</span>❤️</strong>
+            </h3>
+        </div>
+    </section>
+    <footer style="height: 394px; padding: 28px 50px">
+        <footer style="height: 247px">
+            <div class="row">
+                <div class="col-sm-6 col-md-4 footer-navigation">
+                    <h3>
+                        <a href="index.html" style="font-family: Catamaran, sans-serif">Techie Yp</a>
+                    </h3>
+                    <p class="links">
+                        <a href="#">Home</a><strong> · </strong><a href="#">Blog</a><strong> · · </strong><a
+                            href="#">About</a><strong> · · </strong><a href="#">Contact</a>
+                    </p>
+                    <p class="company-name">Techie Yp @2023</p>
+                </div>
+                <div class="col-sm-6 col-md-4 footer-contacts">
+                    <div>
+                        <span class="fa fa-map-marker footer-contacts-icon"> </span>
+                        <p>
+                            <span class="new-line-span">Maharashtra India&nbsp;</span>
+                            425001
+                        </p>
+                    </div>
+                    <div>
+                        <i class="fa fa-phone footer-contacts-icon"></i>
+                        <p class="footer-center-info email text-start">010101010101</p>
+                    </div>
+                    <div>
+                        <i class="fa fa-envelope footer-contacts-icon"></i>
+                        <p class="lead">
+                            <a href="#" data-bs-toggle="email">techieyp@gmail.com</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 footer-about">
+                    <h4>About the company</h4>
+                    <p>
+                        Techie Yp is premier destination for in-depth insights into the
+                        world of cryptocurrencies&nbsp;
+                    </p>
+                    <div class="social-links social-icons">
+                        <a href="https://github.com/yashyp12" target="_blank"><i class="fa fa-github"></i></a><a
+                            href="https://twitter.com/techieyp" target="_blank"><i class="fa fa-twitter"></i></a><a
+                            href="https://www.linkedin.com/in/yashyp12/"><i class="fa fa-linkedin"></i></a><a
+                            href="https://t.me/Cryptoox12"><i class="fa fa-telegram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="container">
+            <ul class="list-inline" style="height: -16px">
+                <li class="list-inline-item"><a href="#">Privacy</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">FAQ</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="/static/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="/static/assets/js/script.min.js"></script>
+</body>
+
+</html>
