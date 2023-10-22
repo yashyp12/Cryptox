@@ -51,7 +51,52 @@
     />
   </head>
 
-  <body>
+  <body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="56">
+<!-- navbar  -->
+<nav class="navbar navbar-light navbar-expand-lg fixed-top" id="mainNav"
+style="height: 73px; font-family: Abel, sans-serif">
+<div class="container">
+    <a class="navbar-brand" href="#page-top"><strong>Techie Yp</strong></a><button data-bs-toggle="collapse"
+        data-bs-target="#navbarResponsive" class="navbar-toggler float-end" aria-controls="navbarResponsive"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto">
+            <!-- <li class="nav-item">
+                <a class="nav-link" href="/btc_price">Top Coins</a>
+            </li> -->
+            <li class="nav-item"><a class="nav-link active" href="/index">HOME</a></li>
+
+
+            <li class="nav-item">
+                <a class="nav-link" href="/AboutUs">ABOUT US</a>
+            </li>
+
+            <!-- <li class="nav-item">
+                <a class="nav-link" href="/btc_price">Prices</a>
+            </li>
+-->
+
+            <!-- {% if user.is_authenticated %}
+            <li class="nav-item">
+                <a class="nav-link" href="LogOut">Logout</a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+                <a class="nav-link" href="/LoginUser">Login</a>
+            </li>
+            {% endif %}
+
+            <li class="nav-item">
+                <a class="nav-link" href="/Login">signup</a>
+            </li> -->
+        </ul>
+    </div>
+</div>
+</nav>
+
+
     <section id="portfolio" class="py-5" style="background: #25231e">
       <div class="intro" style="color: var(--bs-red)">
         <h2 class="text-center">
@@ -200,43 +245,7 @@
           </div>
         </div>
       </section>
-      <nav
-        class="navbar navbar-light navbar-expand-lg fixed-top"
-        id="mainNav"
-        style="height: 73px; font-family: Abel, sans-serif"
-      >
-        <div class="container">
-          <a class="navbar-brand" href="index.html" target="_top"
-            ><strong>Techie Yp</strong></a
-          ><button
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarResponsive"
-            class="navbar-toggler float-end"
-            aria-controls="navbarResponsive"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <i class="fa fa-bars"></i>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link active" href="index.html">HOME</a>
-              </li>
-              <li class="nav-item"></li>
-              <li class="nav-item">
-                <a class="nav-link" href="about-us.html">ABOUT US</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="login-page.html">login</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="login-page.html">signup</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+     
     </section>
     <script src="/static/assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>

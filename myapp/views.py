@@ -29,7 +29,7 @@ def LoginUser(request):
             return redirect("/")
     
         else:
-            messages.success(request, "Please Enter Valid Password And Unsername!")
+            messages.success(request, "Enter valid Email Pass!")
             return render(request,'login-page.html')
     return render(request,'login-page.html')
 
