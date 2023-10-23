@@ -25,7 +25,7 @@ admin.site.index_title = "Welcome to Techie Yp   "
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index',views.index,name='home'),
+    path('',views.index,name='home'),
     path('AboutUs',views.AboutUs,name='AboutUs'),
     path('TopCoins',views.TopCoins,name='TopCoins'),
     path('LoginUser',views.LoginUser,name='LoginUser'),
