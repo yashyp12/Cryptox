@@ -27,7 +27,7 @@ def LoginUser(request):
             login(request,user)
             messages.success(request, "Logged Successfully!")
             return redirect("/")
-
+    
         else:
             messages.success(request, "Please Enter Valid Password And Unsername!")
             return render(request,'login-page.html')
@@ -46,3 +46,6 @@ def btc_price(request):
     btc_price = data['bitcoin']['usd']
 
     return render(request, 'Top-coins.html', {'btc_price':btc_price})
+
+
+ 
