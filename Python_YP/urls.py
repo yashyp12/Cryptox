@@ -31,6 +31,7 @@ urlpatterns = [
     path('LoginUser',views.LoginUser,name='LoginUser'),
     path('LogOut',views.LogOut,name='LogOut'),
     path('btc_price', views.btc_price, name='btc_price'),
- 
+    path('signupuser', views.signupuser, name='signupuser'),
+     
  
  ]

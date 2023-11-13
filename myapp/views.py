@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.contrib.auth import authenticate,login
 from django.contrib import messages
 from django.contrib.auth import logout
+from django.contrib.auth.models import User
 
 
 import requests
@@ -17,6 +18,11 @@ def AboutUs(request):
 
 def TopCoins(request):
     return render(request,'Top-coins.html')
+
+def signup(request):
+
+    
+    return render(request,'signup')
 
 def LoginUser(request):
     if request.method == "POST" :
@@ -48,4 +54,23 @@ def btc_price(request):
     return render(request, 'Top-coins.html', {'btc_price':btc_price})
 
 
+def signupuser(request):
+    if request.method == "POST":
+        username = request.POST.get('username')
+        username = request.POST['username']
+        email = request.POST['email']
+        password = request.POST['password']
+        rpassword = request.POST['password']
+
+        myuser = User.objects.create(username,email,password,password)
+        myuser.username=username
+        myuser.email=email
+
+        myuser.save()
+
+        messages.success(request,"Your account as been successfully created .")
+
  
+    
+    return render(request,'signupuser.html')
+    

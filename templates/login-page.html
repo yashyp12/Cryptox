@@ -19,21 +19,22 @@
 </head>
 
 <body style="background: url(&quot;/static/assets/img/pexels-cottonbro-studio-8721339.jpg&quot;) center / cover no-repeat;height: 712px;">
-    <form action="/LoginUser" method="post"  data-aos="zoom-in" id="form" style="font-family: Allerta, sans-serif;width: 332px;padding: 0px;background: rgba(0,0,0,0.12);height: 322px;margin: 0px;--bs-body-font-size: 17rem;border-radius: -23px;border-width: 32px;border-style: initial;">
+    <form action="/LoginUser" method="post" data-aos="zoom-in" id="form" style="font-family: Allerta, sans-serif;width: 332px;padding: 0px;background: rgba(0,0,0,0.12);height: 322px;margin: 0px;--bs-body-font-size: 17rem;border-radius: -23px;border-width: 32px;border-style: initial;">
         {% csrf_token %}
         <h1 id="head" style="color: rgb(193,166,83);background: rgba(0,0,0,0.12);border-color: var(--bs-pink);"><strong><span style="color: rgb(209, 209, 198);">Login&nbsp;&nbsp;</span></strong></h1>
         <div></div>
         <div class="form-group mb-3"><input class="form-control" type="email" id="formum" style="background: rgba(0,0,0,0.12);" placeholder="Email" name="username" value=" " autofocus="" inputmode="email"></div>
-        <div class="form-group mb-3"><input class="form-control" type="password" id="formum2" placeholder="Password" autofocus="" required="" minlength="6" maxlength=" " name="password" ></div>
+        <div class="form-group mb-3"><input class="form-control" type="password" id="formum2" placeholder="Password" autofocus="" required="" minlength="6" maxlength=" " name="password"></div>
         <button class="btn btn-secondary btn-sm text-nowrap fs-6 fw-bolder text-center link-danger" id="butonas" style="width: 45%;height: 16%;margin: 39px;margin-bottom: 10px;background: rgba(0,0,0,0.12);padding: 10px 12px;text-align: center;transform: perspective(480px) translate(29px);" type="submit">Login</button><a id="linkas" style="font-size:12px;margin:auto;margin-left:0;margin-right:0;margin-bottom:0;margin-top:0;padding-left:0;padding-right:0;color:rgb(177,151,70);" href="#">Forgot Password ?</a>
     </form>
+    
     <nav class="navbar navbar-light navbar-expand-lg fixed-top" id="mainNav" style="height: 73px;font-family: Abel, sans-serif;">
         <div class="container"><a class="navbar-brand" href="#page-top"><strong>Techie Yp</strong></a><button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler float-end" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">HOME</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/Top-coins.html">Top Coins</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/about-us.html">ABOUT US</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="TopCoins">Top Coins</a></li>
+                    <li class="nav-item"><a class="nav-link" href="AboutUs">ABOUT US</a></li>
                     <li class="nav-item"></li>
                     <li class="nav-item"></li>
                 </ul>
