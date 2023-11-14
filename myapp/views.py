@@ -3,6 +3,8 @@ from django.http import HttpResponse
 from django.contrib.auth import authenticate,login
 from django.contrib import messages
 from django.contrib.auth import logout
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import login as auth_login
 from django.contrib.auth.models import User
 
 
@@ -57,20 +59,23 @@ def btc_price(request):
 def signupuser(request):
     if request.method == "POST":
         username = request.POST.get('username')
-        username = request.POST['username']
-        email = request.POST['email']
-        password = request.POST['password']
-        rpassword = request.POST['password']
+        email = request.POST.get('email')
+        password = request.POST.get('password')
+        password_repeat = request.POST.get('password_repeat')
 
-        myuser = User.objects.create(username,email,password,password)
-        myuser.username=username
-        myuser.email=email
+        # Check if passwords match
+        if password != password_repeat:
+            messages.error(request, "Passwords do not match.")
+            return redirect('signupuser')  # You may need to adjust the URL name if it's different
 
-        myuser.save()
+        # Create a new user
+        try:
+            user = User.objects.create_user(username=username, email=email, password=password)
+            user.save()
+            messages.success(request, "Your account has been successfully created.")
+            return redirect('home')  # You may need to adjust the URL name if it's different
+        except Exception as e:
+            messages.error(request, f"Error creating user: {str(e)}")
+            return redirect('signupuser')  # You may need to adjust the URL name if it's different
 
-        messages.success(request,"Your account as been successfully created .")
-
- 
-    
-    return render(request,'signupuser.html')
-    
+    return render(request, 'signupuser.html')
