@@ -21,11 +21,7 @@ def AboutUs(request):
 def TopCoins(request):
     return render(request,'Top-coins.html')
 
-def signup(request):
-
-    
-    return render(request,'signup')
-
+ 
 def LoginUser(request):
     if request.method == "POST" :
         username = request.POST.get('username')
