@@ -16,13 +16,72 @@
     <link rel="stylesheet" href="/static/assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="/static/assets/css/styles.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <style>
+        body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 50%;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    header {
+      background: #fff;
+      padding: 20px 0;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    header h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    form {
+      background: #fff;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 20px;
+      box-sizing: border-box;
+    }
+
+    form button {
+      background: #333;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background: #555;
+    }
+    </style>
 </head>
 
 <body>
     <section id="portfolio" class="py-5" style="height: 902px;background: url(&quot;https://images.pexels.com/photos/1181325/pexels-photo-1181325.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600&quot;) center / cover no-repeat;">
         <div class="intro">
             <h2 class="text-center" style="font-size: 58px;color: var(--bs-light);font-family: Lato, sans-serif;">About us&nbsp;</h2>
-            <p class="text-center" style="color: var(--bs-red);font-weight: bold;font-size: 23px;"><span style="color: rgb(249, 229, 91);">&nbsp;Yash Yuvraj Patil&nbsp;</span><br><span style="color: rgb(249, 229, 91);">Bachelors of Computer Application</span></p>
+            <p class="text-center" style="color: var(--bs-red);font-weight: bold;font-size: 23px;"><span style="color: rgb(249, 229, 91);">&nbsp;Yash Yuvraj Patil&nbsp;</span><br><span style="color:skyblue;">BCA</span></p>
         </div>
         <nav class="navbar navbar-light navbar-expand-lg fixed-top" id="mainNav" style="height: 73px;font-family: Abel, sans-serif;color: var(--bs-red);background: black;">
             <div class="container"><a class="navbar-brand" href="index.html" style="color: var(--bs-yellow);" target="_top"><strong>Techie Yp</strong></a><button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler float-end" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
@@ -35,8 +94,36 @@
                     </ul>
                 </div>
             </div>
+
+            
         </nav>
     </section>
+<section>
+    <div class="container">
+        {% if messages %}
+  {% for message in messages %}
+    <div class="alert alert-success">
+      {{ message }}
+    </div>
+  {% endfor %}
+{% endif %}
+        <form action="{% url 'aboutus' %}" method="post">
+            <label for="name">Your Name:</label>
+          <input type="text" id="name" name="name" required>
+    
+          <label for="email">Your Email:</label>
+          <input type="email" id="email" name="email" required>
+    
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+          {% csrf_token %}
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+</section>
+
+
+
     <script src="/static/assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="/static/assets/js/script.min.js"></script>

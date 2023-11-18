@@ -17,6 +17,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from myapp import views
+from django.urls import path
+from myapp.views import aboutus
+
 
 admin.site.site_header = "Techie Yp Admin "
 admin.site.site_title = "Techie Yp admin  "
@@ -32,6 +35,7 @@ urlpatterns = [
     path('LogOut',views.LogOut,name='LogOut'),
     path('btc_price', views.btc_price, name='btc_price'),
     path('signupuser', views.signupuser, name='signupuser'),
-     
+    path('aboutus/', aboutus, name='aboutus'),
+
  
  ]

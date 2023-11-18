@@ -6,6 +6,8 @@ from django.contrib.auth import logout
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login as auth_login
 from django.contrib.auth.models import User
+from .forms import ContactForm
+from django.http import JsonResponse
 
 
 import requests
@@ -75,3 +77,17 @@ def signupuser(request):
             return redirect('signupuser')  # You may need to adjust the URL name if it's different
 
     return render(request, 'signupuser.html')
+
+def aboutus(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Your message has been submitted successfully.")
+            return redirect('AboutUs')  # Redirect to the About Us page or any other page you prefer
+        else:
+            messages.error(request, "Please correct the errors in the form.")
+    else:
+        form = ContactForm()
+
+    return render(request, 'about-us.html', {'form': form})
