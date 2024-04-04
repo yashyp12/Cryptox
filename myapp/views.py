@@ -36,7 +36,7 @@ def LoginUser(request):
             messages.success(request, "Please Enter Valid Password And Unsername!")
             return render(request, 'login-page.html')
     return render(request, 'login-page.html')
-
+ssss
 
 def LogOut(request):
     logout(request)
