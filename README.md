@@ -1,4 +1,4 @@
-**CRYPTOS -  **
+CRYPTOX 
 
 Cryptos is a dynamic and interactive crypto website designed to provide users with a comprehensive platform to explore the exciting world of blockchain technology and cryptocurrencies. This project is not only a showcase of technical skills but also an informative hub for crypto enthusiasts.
 
@@ -32,11 +32,6 @@ note - need to install several python packages
 ## Project Structure:
 
 - **`/src`**: Contains the source code of the project.
- 
-
-## Contributing:
-
-We welcome contributions to enhance Cryptos! Feel free to open issues, submit pull requests, or suggest new features.
 
 ## License:
 
@@ -44,10 +39,4 @@ This project is licensed under the [MIT License](LICENSE).
 This project comes under the Organisaton @techieyp 
 for any queries -techieyp@gmail.com
 
-## Acknowledgments:
 
-We appreciate the support of the open-source community and the developers who contributed to the technologies used in this project.
-
----
-
-Feel free to modify the content to better suit your project and its specific features. Including detailed information in the README helps users, potential contributors, and recruiters understand the scope and functionalities of your project.
